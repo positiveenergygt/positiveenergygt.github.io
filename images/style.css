@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css?family=Gugi:400,500,600');
+
+/*
+:root {
+    --primary: #7ec13f;;
+    --accent: #F5514B;
+  }
+  */
+
+.navbar-logo {
+    width: 400px;
+    height: 100px;
+}
+
+/* start all section */
+    #vision, #products, #clients, #aboutus, #contact, #mission
+    {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        position: relative;
+    }
+    #products {
+      background-color: #f6f6f6;
+    }
+
+    .section-title {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .section-title h1 {
+      color: #7ec13f;
+      font-size: 30px;
+    }
+    .section-title-w {
+      color: #ffffff;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .section-title-w h1 {
+      color: #ffffff;
+      font-size: 30px;
+    }
+/* end all section */
+
+
+
+  /* ========================================================================== *
+   *   Typography                                                                   *
+   * ========================================================================== */
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 600;
+    line-height: inherit;
+  }
+
+  h1,h2,h3,h4 {
+    letter-spacing: -1px;
+  }
+
+  h5 {
+    font-weight: 500;
+  }
+
+  h1 {
+    color: #252525;
+    font-size: 5em;
+  }
+
+  h2 {
+    color: #272727;
+    font-size: 3em;
+    padding-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.8em;
+    line-height: 1.2em;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    color: #454545;
+    font-size: 1.8em;
+    padding-bottom: 2px;
+  }
+
+  h6 {
+    letter-spacing: 0;
+    font-weight: normal;
+  }
+
+  p {
+    color: #757575;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+  }
+
+
+  /* ========================================================================== *
+   *   GENERAL                                                                   *
+   * ========================================================================== */
+
+  html{
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: #252525;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none !important;
+  }
+
+  a:hover, a:active, a:focus {
+    color: #a5c422;
+    outline: none;
+  }
+
+  ::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #000000;
+  }
+
+  hr {
+    width: 180px;
+    border-color: #CCC;
+  }
+
+  .overlay {
+	background: rgba(0, 0, 0, 0.4) url("../images/pattern/small-square.png") repeat;
+  /*background-color: rgba(20,20,20,0.2);*/
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.parallax .container {
+	position:relative;
+}
+
+.parallax {
+	background-attachment: fixed !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+
+img.parallax {
+	background-attachment: fixed;
+}
+
+.scrollup {
+	width:35px;
+	height:35px;
+	position:fixed;
+	bottom:30px;
+	right:15px;
+	display:none;
+	background: #7ec13f;
+  opacity: 0.6;
+	text-align: center;
+}
+
+.scrollup i {
+	color:#fff;
+	font-size:15px;
+	display:block;
+	line-height:33px;
+}
+
+.scrollup:hover {
+	background: #7ec13f;
+  opacity: 0.9;
+}
+
+
+/* ========================================================================== *
+*   NAVIGATION SECITON                                                                   *
+* ========================================================================== */
+.custom-navbar {
+  background: #ffffff;
+  margin-bottom: 0;
+}
+.custom-navbar .navbar-brand  {
+font-family: 'Gugi', sans-serif;
+color: #7ec13f;
+font-weight: 600;
+font-size: 24px;
+}
+.custom-navbar .navbar-brand .navbar-toggle {
+  background: #7ec13f;
+  padding: 4px 6px;
+  font-size: 16px;
+  color: #fff;
+  }
+.custom-navbar .nav li a {
+  color: #7ec13f;
+  font-size: 14px;
+  font-weight: 600;
+  }
+.custom-navbar .nav li a:hover {
+  background: transparent;
+ color: #F5514B;
+}
+.custom-navbar .nav > li > a:focus {
+background-color: transparent;
+color: #F5514B;
+outline: none;
+}
+.custom-navbar .nav li.active > a {
+    color: #F5514B;
+  }
+.custom-navbar .navbar-toggle {
+      border: none;
+      padding-top: 10px;
+  }
+.custom-navbar .navbar-toggle .icon-bar {
+      background: #F5514B;
+      border-color: transparent;
+  }
+@media(min-width:768px){
+  .custom-navbar {
+          background: #ffffff;
+          padding: 10px;
+          border-bottom: 0;
+          background: 0 0;
+       }
+  .custom-navbar.top-nav-collapse {
+          padding: 8px;
+          background: #ffffff;
+          border-bottom: 1px solid #e9ecef;
+      }
+}
+
+/* ========================================================================== *
+ *   HOME                                                                     *
+ * ========================================================================== */
+  #home h2 {
+    color: #ffffff;
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
+
+  #home h3 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: inherit;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .slider-caption {
+    color: #ffffff;
+    font-weight: normal;
+    text-shadow: 2px 2px 2px #333;
+  }
+
+  .slider .container {
+    width: 100%;
+  }
+
+  .slider .owl-dots {
+      position: absolute;
+      top: 575px;
+      width: 100%;
+      justify-content: center;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    margin: 5px 7px;
+    border: 2px solid #d9d9d9;
+    background: transparent;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 50px;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #7ec13f;
+    border-color: transparent;
+  }
+
+  .owl-theme .owl-nav [class*=owl-] {
+    background: 0, 0;
+  }
+  .owl-theme .owl-nav [class*=owl-]:hover {
+    background: 0, 0;
+  }
+
+  .owl-prev, .owl-next {
+    width: 15px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block !important;
+    border:0px;
+  }
+
+  .owl-prev { left: 20px; }
+  .owl-next { right: 20px; }
+  .owl-prev i, .owl-next i {
+    transform : scale(2,5); 
+    color: #7ec13f;
+  }
+
+  .slider .caption {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    color: #ffffff;
+    /*background-color: rgba(20,20,20,0.6);
+    cursor: e-resize;*/
+  }
+
+  .slider .item {
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    height: 650px;
+    position: relative;
+  }
+
+  .slider .item-first {
+    background-image: url(../images/Slider1.jpg);
+  }
+
+  .slider .item-second {
+    background-image: url(../images/Slider2.jpg);
+  }
+
+  .slider .item-third {
+    background-image: url(../images/Slider3.jpg);
+  }
+
+
+  /* ========================================================================== *
+   *   VALUES                                                                   *
+   * ========================================================================== */
+
+    .values-info{
+        margin-bottom: 50px;
+    }
+
+  #values figure {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px;
+  }
+
+  #values figure span {
+    float: left;
+    margin-left: -15px;
+    padding: 15px 20px;
+    position: relative;
+    top: 20px;
+  }
+
+  #values figure span i {
+    background: #7ec13f;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  /* ========================================================================== *
+   *   Mission                                                                   *
+   * ========================================================================== */
+
+   .mission-box {
+    text-align: center;
+    margin-bottom: 50px;
+    border: 1px solid #EAE7E7;
+    padding: 5px 5px 5px;
+    height: 500px;
+  }
+
+  .mission-box:hover {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.20);
+  }
+
+  .mission-img {
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+  }
+
+  .mission-img img {
+    height: 250px;
+    width: 100%
+  }
+
+  .mission-icon {
+    /*background-color: rgb(245,81,75,0.6);*/
+    position: absolute;
+    color: #ffffff;
+    font-size: 70px;
+    opacity: 1;
+    max-width: 500px;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    top: 0;
+    left: 0;
+    /*right: 0;*/
+    bottom: 0;
+    transition: all 0.4s ease-in-out;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .mission-icon.mi-first {
+    background-color: rgb(37, 150, 190, 0.6);
+  }
+
+  .mission-icon.mi-second {
+    /*background-color: rgb(245,81,75,0.6);
+    background-color: rgb(255, 102, 0, 0.6);*/
+    background-color: rgb(255, 120, 31, 0.6); 
+  }
+
+  .mission-icon.mi-third {
+    background-color: rgb(37, 150, 190, 0.6);
+  }
+
+  .mission-box .mission-desc {
+    margin-top: 25px;
+  }
+
+  .mission-box .mission-desc h4 {
+    color: #7ec13f;
+  }
+  
+  .mission-box .mission-desc hr {
+    margin-top: 0px;
+  }
+
+
+
+  /* ========================================================================== *
+   *   Vision                                                                   *
+   * ========================================================================== */
+
+  #vision .media
+    {
+        padding: 10px;
+        vertical-align: top;
+    }
+  
+  #vision .media .media-heading
+    {
+        /*border-bottom: 0.5px solid #202020;*/
+        border-bottom: 0.5px solid #CCC;
+        font-weight: 500;
+        font-size: 25px;
+        color: #7ec13f;
+        padding-bottom: 10px;
+    }
+
+
+    #vision .media .media-object {
+        float: left;
+        margin-left: -15px;
+        padding: 15px 20px;
+        position: relative;
+        /*top: 20px;*/
+      }
+
+    #vision .media .media-object i {
+        /*
+        background: #7ec13f;
+        color: #ffffff;
+        border-radius: 50px;
+        */
+        color: #7ec13f;
+        font-size: 40px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+
+  /* ========================================================================== *
+   *   PRODUCTS                                                                  *
+   * ========================================================================== */
+
+   #products .container {
+    width: 100%;
+  }
+
+    /* FILTER CSS */
+.filter-wrapper {
+  width: 100%;
+  margin: 40px 0 24px 0;
+  overflow: hidden;
+  text-align: center;
+}
+.filter-wrapper li {
+  display: inline-block;
+  margin: 4px;
+}
+.filter-wrapper li a {
+  color: #999999;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 17px;
+  display: block;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+.filter-wrapper li .selected,
+.filter-wrapper li a:focus,
+.filter-wrapper li a:hover {
+  color: #7ec13f;
+  outline: none;
+}
+
+/* ISOTOPE BOX CSS */
+.iso-box-section {
+  width: 100%;
+}
+.iso-box-wrapper {
+  width: 100%;
+  padding: 0;
+  clear: both;
+  position: relative;
+}
+.iso-box {
+  position: relative;
+  min-height: 50px;
+  float: left;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.iso-box > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.iso-box > a > img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.fluid-img {
+width: 100%;
+display: block;
+}
+
+
+  /* ========================================================================== *
+   *   CLIENTS                                                                  *
+   * ========================================================================== */
+   #clients {
+    background:url(../images/clients.jpg) no-repeat;
+    color: #ffffff;
+  }
+
+    #clients .media .media-object {
+        float: left;
+        margin-left: -15px;
+        padding: 15px 20px;
+        position: relative;
+        /*top: 20px;*/
+      }
+
+    #clients .media-object i {
+        
+        /*background: #7ec13f;
+        color: #ffffff;
+        border-radius: 20px;*/
+        color: #7ec13f;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+   #clients p {
+    color: inherit;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+  }
+
+  /* ========================================================================== *
+   *   CONTACT                                                                  *
+   * ========================================================================== */
+
+   #contact {
+    background:url(../images/contact.jpg) no-repeat;
+  }
+
+    #contact h2 {
+        color: #ffffff;
+        font-size: 22px;
+        padding-bottom: 14px;
+    }
+    #contact h4 {
+        color: #ffffff;
+        font-size: 18px;
+        padding-top: 8px;
+    }
+    #contact p {
+        font-size: 16px;
+        color: #ffffff;
+    }
+    #contact span {
+        font-weight: bold;
+        padding-left: 24px;
+    }
+    #contact .ph, #contact .address, #contact .email {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    #contact .fa {
+        font-size: 12px;
+        padding-right: 10px;
+    }
+    
+    #contact .media-object i {
+      /*
+      background: #7ec13f;
+      color: #ffffff;
+      border-radius: 50px;
+      */
+      color: #7ec13f;
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+  }
+
+   /* ========================================================================= *
+   *   GOOGLE MAP                                                               *
+   * ========================================================================== */
+    #google-map {
+        line-height: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+
+   /* ========================================================================= *
+   *   FOOTER                                                        *
+   * ========================================================================== */
+    footer {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    footer p {
+        padding-top: 20px;
+    }
