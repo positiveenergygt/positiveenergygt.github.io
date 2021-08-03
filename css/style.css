@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Gugi:400,500,600');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
 /*
 :root {
@@ -693,3 +694,100 @@ display: block;
     footer p {
         padding-top: 20px;
     }
+
+
+  /* ========================================================================= *
+   *   MAINTENANCE SCREEN                                                        *
+   * ========================================================================== */
+
+    .simpleslide100 {
+      display: block;
+      position: fixed;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0
+    }
+    
+    .simpleslide100-item {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0
+    }
+
+    .bg-img1 {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover
+    }
+
+    .overlay1 {
+      position: relative;
+      z-index: 1
+    }
+    
+    .overlay1::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #7579ff;
+      background: -webkit-linear-gradient(bottom, #b224ef, #7579ff);
+      background: -o-linear-gradient(bottom, #b224ef, #7579ff);
+      background: -moz-linear-gradient(bottom, #b224ef, #7579ff);
+      background: linear-gradient(bottom, #b224ef, #7579ff);
+      opacity: .3
+    }
+    
+    .overlay1::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .4)
+    }
+
+    .size1 {
+      width: 100%;
+      min-height: 100vh
+    }
+
+    .l1-txt1 {
+      font-family: 'Poppins';
+      font-size: 72px;
+      line-height: 1.1;
+      color: rgba(255, 255, 255, .5);
+      text-transform: uppercase;
+      letter-spacing: 15px
+    }
+
+    .maint-text-div {
+      padding: 25px 0 25px;
+      min-height: 100vh;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .maint-text-div h1 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    
