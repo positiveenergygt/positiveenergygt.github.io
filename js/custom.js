@@ -33,7 +33,8 @@
         animateOut: 'fadeOut',
         items:1,
         loop:true,
-        autoplay:false,
+        autoplay:true,
+        autoplayTimeout:4000,
         nav:true,
         navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
     });
@@ -54,7 +55,31 @@
     });
 
 
+    // Swiper
+    var swiper = new Swiper( '.swiper-container', {
+      effect: 'coverflow',
+      centeredSlides: true,
+      slidesPerView: 1,
+      loop: true,
+      speed: 600,
+      autoplay: true,
+      smartSpeed: 3000,
+      fluidSpeed: false,
+      dragEndSpeed: false,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+          
+      coverflowEffect: {
+      rotate: 0,
+      stretch: 95,
+      depth: 150,
+      modifier: 1,
+      slideShadows : true,
+      }
+      });
+
 })(jQuery);
+
 
 
 /*------------------------------*/
