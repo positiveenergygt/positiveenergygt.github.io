@@ -1,3 +1,15 @@
+// Global Variables
+let swiper = undefined;
+let curCatg = undefined;
+
+// Constants
+const aggrCatg = ["crushed-aggregate-1.jpg", "crushed-aggregate-2.jpg", "crushed-aggregate-3.jpg", "Sulfur1.jpg", "Sulfur2.jpg", 
+  "Sulfur3.jpg", "crushed-aggregate-4.jpg", "crushed-aggregate-5.jpg", "crushed-aggregate-6.jpg", "crushed-aggregate-7.jpg"];
+const hotelCatg = ["toothbrush.jpg:Tooth Brush", "shaving-kit.jpg:Shaving Kit", "shower-cap.jpg:Shower Cap", "vanity-kit.jpg:Vanity Kit", "terry-slippers.jpg:Terry Slipper"];
+const greenCatg = ["greens1.jpg", "urea-1.jpg", "urea-2.jpg"];
+const elevatorCatg = ["lubricant-1.jpg", "lubricant-2.jpg", "elevator-1.jpg", "elevator-2.jpg", "elevator-3.jpg"];
+
+
 (function ($) {
 
     "use strict";
@@ -54,30 +66,9 @@
       $('.owl-item').not('.cloned').eq(item).find('.slider-btn').attr("style","visibility: visible; animation-name: fadeInUp;");
     });
 
-
     // Swiper
-    var swiper = new Swiper( '.swiper-container', {
-      effect: 'coverflow',
-      centeredSlides: true,
-      slidesPerView: 1,
-      loop: true,
-      speed: 600,
-      autoplay: true,
-      smartSpeed: 3000,
-      fluidSpeed: false,
-      dragEndSpeed: false,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-          
-      coverflowEffect: {
-      rotate: 0,
-      stretch: 95,
-      depth: 150,
-      modifier: 1,
-      slideShadows : true,
-      }
-      });
-
+    initSwiper();
+    
 })(jQuery);
 
 
@@ -183,3 +174,72 @@ $('.scrollup').click(function(){
   $("html, body").animate({ scrollTop: 0 }, 2000);
   return false;
 });
+
+function reAssignSlider(catg) {
+  if(curCatg && curCatg === catg) return;
+
+  let slideCatg = [];
+  if(catg==='all' || catg==='aggr') slideCatg.push(...aggrCatg);
+  if(catg==='all' || catg==='hotel') slideCatg.push(...hotelCatg);
+  if(catg==='all' || catg==='elevator') slideCatg.push(...elevatorCatg);
+  if(catg==='all' || catg==='green') slideCatg.push(...greenCatg);
+
+  swiper.removeAllSlides();
+  slideCatg.forEach(function (item, index) {
+    const imgPath = item.split(":")[0];
+    const caption = item.split(":").length>1 && item.split(":")[1];
+    swiper.appendSlide(getSliderDiv(imgPath, caption));
+  });
+
+  curCatg = catg;
+}
+
+function getSliderDiv(imgName, caption) {
+  const slideDiv = document.createElement("div");
+  slideDiv.className = 'swiper-slide';
+
+  const slideImgDiv = document.createElement("div");
+  slideImgDiv.className = 'slider-image';
+
+  const sliderImg = document.createElement("img");
+  sliderImg.setAttribute('src', 'images/products/'+imgName);
+  sliderImg.className = 'trending_img';
+  sliderImg.alt = 'PEGT';
+  slideImgDiv.appendChild(sliderImg);
+
+  if(caption) {
+    const imgCaptionDiv = document.createElement("div");
+    imgCaptionDiv.className = 'slider-img-caption';
+    imgCaptionDiv.appendChild(document.createTextNode(caption));
+    slideImgDiv.appendChild(imgCaptionDiv);
+  }
+  
+  slideDiv.appendChild(slideImgDiv);
+  return slideDiv;
+}
+
+function initSwiper() {
+  swiper = new Swiper( '.swiper-container', {
+    effect: 'coverflow',
+    centeredSlides: true,
+    slidesPerView: 1,
+    loop: true,
+    speed: 1200,
+    autoplay: true,
+    smartSpeed: 6000,
+    fluidSpeed: false,
+    dragEndSpeed: false,
+    centeredSlides: true,
+    slidesPerView: 'auto', 
+    
+    coverflowEffect: {
+    rotate: 0,
+    stretch: 95,
+    depth: 150,
+    modifier: 1,
+    slideShadows : true,
+    }
+  });
+
+  reAssignSlider('all');
+}

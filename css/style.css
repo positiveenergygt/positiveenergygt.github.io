@@ -431,6 +431,10 @@ outline: none;
     background-image: url(../images/Slider3.jpg);
   }
 
+  .slider .item-four {
+    background-image: url(../images/Slider4.jpg);
+  }
+
   /* ========================================================================== *
    *   products / Swiper                                                                     *
    * ========================================================================== */
@@ -1029,6 +1033,22 @@ outline: none;
     width: 12px;
   }
 
+  .slider-image {
+    position: relative;
+  }
+
+  .slider-img-caption {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    bottom: 0%;
+    transform: translate(0%, -0%);
+    background-color: rgba(41, 41, 41, 0.4);
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 20px;
+  }
+
 
   /* ========================================================================== *
    *   VALUES                                                                   *
@@ -1539,5 +1559,4 @@ display: block;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
-    
     
