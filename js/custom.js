@@ -3,8 +3,7 @@ let swiper = undefined;
 let curCatg = undefined;
 
 // Constants
-const aggrCatg = ["crushed-aggregate-1.jpg", "crushed-aggregate-2.jpg", "crushed-aggregate-3.jpg", "Sulfur1.jpg", "Sulfur2.jpg", 
-  "Sulfur3.jpg", "crushed-aggregate-4.jpg", "crushed-aggregate-5.jpg", "crushed-aggregate-6.jpg", "crushed-aggregate-7.jpg"];
+const aggrCatg = ["crushed-aggregate-1.jpg", "crushed-aggregate-2.jpg", "crushed-aggregate-3.jpg", "crushed-aggregate-4.jpg", "crushed-aggregate-5.jpg", "crushed-aggregate-6.jpg", "crushed-aggregate-7.jpg"];
 const hotelCatg = ["toothbrush.jpg:Tooth Brush", "shaving-kit.jpg:Shaving Kit", "shower-cap.jpg:Shower Cap", "vanity-kit.jpg:Vanity Kit", "terry-slippers.jpg:Terry Slipper"];
 const greenCatg = ["greens1.jpg", "urea-1.jpg", "urea-2.jpg"];
 const elevatorCatg = ["lubricant-1.jpg", "lubricant-2.jpg", "elevator-1.jpg", "elevator-2.jpg", "elevator-3.jpg"];
